@@ -46,6 +46,14 @@ body {
   cursor: not-allowed;
 }
 
+.activeClass {
+  color: green !important;
+}
+
+.errorClass {
+  text-decoration: underline
+}
+
 h1 {
   font-size: 50px;
 }
