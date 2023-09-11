@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart:0,
+            cart: 0,
             product: 'Socks',
             brand: 'Vue Mastery',
             selectedVariant: 0,
@@ -9,8 +9,7 @@ const app = Vue.createApp({
             variants: [
               { id: 2234, color: 'green', image: './assets/images/socks_green.jpg', quantity: 50 },
               { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0 },
-            ],
-            onSale: true,
+            ]
         }
     },
     methods: {
@@ -19,7 +18,7 @@ const app = Vue.createApp({
         },
         updateVariant(index) {
             this.selectedVariant = index
-        },
+        }
     },
     computed: {
         title() {
@@ -29,14 +28,7 @@ const app = Vue.createApp({
             return this.variants[this.selectedVariant].image
         },
         inStock() {
-            return this.variants[this.selectedVariant].quantity > 0
+            return this.variants[this.selectedVariant].quantity
         },
-        onSaleText() {
-            if (this.onSale) {
-                return this.title + ' is on sale'
-            }
-
-            return ''
-        }
     }
 })

@@ -31,21 +31,12 @@
             <div 
               v-for="(variant, index) in variants" 
               :key="variant.id" 
-              @mouseover="updateVariant(index)"
-              class="color-circle"
-              :style="{ backgroundColor: variant.color }"
-            ></div>
+              @mouseover="updateVariant(index)" 
+              class="color-circle" 
+              :style="{ backgroundColor: variant.color }">
+            </div>
             
-            <button
-              class="button"
-              :class="{ disabledButton: !inStock }"
-              @click="addToCart"
-              :disabled="!inStock"
-            >
-              Add to Cart
-            </button>
-
-            <p v-show="onSale">{{ onSaleText }}</p>
+            <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" v-on:click="addToCart">Add to Cart</button>
           </div>
         </div>
       </div>
