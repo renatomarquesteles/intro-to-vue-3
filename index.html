@@ -19,20 +19,8 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
-            <!-- conditional rendering -->
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
-
-            <!-- v-show toggles elements visibility -->
-            <span v-show="inStock">Product is available</span>
-
-            <div>
-              <span v-if="inventory > 10">Stock: {{inventory}}</span>
-              <span v-else-if="inventory <= 10 && inventory > 0">Almost sold out! ({{inventory}} remaining)</span>
-              <span v-else>Sold out!</span>
-            </div>
-
-            <p v-show="onSale">On Sale</p>
           </div>
         </div>
       </div>
