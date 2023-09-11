@@ -17,7 +17,7 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img v-bind:src="image" :class="{ 'out-of-stock-img': !inStock }">
+            <img v-bind:src="image">
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
@@ -34,7 +34,6 @@
               class="color-circle"
               :style="{ backgroundColor: variant.color }"
             ></div>
-            <!-- Adds the "disabledButton" classname when there is no stock -->
             <button
               class="button"
               :class="{ disabledButton: !inStock }"
@@ -43,13 +42,6 @@
             >
               Add to Cart
             </button>
-
-            <p
-              :style="styles"
-              :class="[{ activeClass: isActive }, { errorClass: isActive }]"
-            >
-              Alert!
-            </p>
           </div>
         </div>
       </div>
