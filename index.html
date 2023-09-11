@@ -21,11 +21,16 @@
             <h1>{{ product }}</h1>
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
+            <ul>
+              <li v-for="detail in details" :key="detail">{{ detail }}</li>
+            </ul>
+            <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+            <ul>
+              <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
+            </ul>
           </div>
         </div>
       </div>
-      
-      <a :href="url" target="_blank">Vue.js docs</a>
     </div>
 
     <!-- Import App -->
