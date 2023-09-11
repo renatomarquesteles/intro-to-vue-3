@@ -16,12 +16,17 @@
         <div class="product-container">
           <div class="product-image">
             <!-- image goes here -->
+            <!-- v-bind: Dynamically bind an attribute (src) to an expression (image) -->
+            <!-- ":" is a shorthand for "v-bind:" -->
+            <img :src="image" />
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
           </div>
         </div>
       </div>
+      
+      <a :href="url" target="_blank">Vue.js docs</a>
     </div>
 
     <!-- Import App -->
